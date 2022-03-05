@@ -22,7 +22,10 @@
 // https://api.themoviedb.org/3/movie/{movie_id}/translations?api_key=<<api_key>>
 
 import { BrowserRouter, Route, Switch } from "react-router-dom"
+
 import Home from "./pages/Home";
+import Latest from "./pages/Latest";
+import Upcoming from "./pages/Upcoming";
 
 
   return (
@@ -31,6 +34,12 @@ import Home from "./pages/Home";
         <Switch>
           <Route exact path='/'>
             <Home />
+          </Route>
+          <Route path='/latest'>
+            <Latest />
+          </Route>
+          <Route path='/upcoming'>
+            <Upcoming />
           </Route>
         </Switch>
       </BrowserRouter>
