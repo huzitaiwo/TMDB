@@ -14,7 +14,6 @@ export default function Home() {
 
   const [page, setPage] = useState(1)
   const [totalPages, setTotalPages] = useState(1)
-  // https://api.themoviedb.org/3/movie/popular?api_key=821df521d9494e5d28d041685eeaee64&page=1
 
   const url = `https://api.themoviedb.org/3/movie/popular?api_key=821df521d9494e5d28d041685eeaee64&page=${page}`
   
