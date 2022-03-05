@@ -23,11 +23,16 @@
 
 import { BrowserRouter, Route, Switch } from "react-router-dom"
 
+// styles
+import './App.css'
+
 import Home from "./pages/Home";
 import Latest from "./pages/Latest";
 import Rated from "./pages/Rated";
 import Upcoming from "./pages/Upcoming";
 
+
+function App() {
 
   return (
     <div className="App">
@@ -49,5 +54,6 @@ import Upcoming from "./pages/Upcoming";
       </BrowserRouter>
     </div>
   )
+}
 
 export default App;

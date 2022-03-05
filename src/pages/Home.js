@@ -1,12 +1,8 @@
 import { useState, useEffect } from "react"
 
-// styles
-import "./App.css"
-
 // components & pages
-
-import Movie from "./components/Movie"
-import Filter from "./components/Filter"
+import Movie from "../components/Movie"
+import Filter from "../components/Filter"
 
 export default function Home() {
   const [popular, setPopular] = useState([])
@@ -25,7 +21,7 @@ export default function Home() {
   
   useEffect(() => {
     fetchPopular()
-  }, [])
+  }, [page])
   
   const fetchPopular = async () => {
     setIsLoading(true)
