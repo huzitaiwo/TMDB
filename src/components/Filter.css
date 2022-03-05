@@ -1,0 +1,19 @@
+.filter {
+  margin-bottom: 2rem;
+}
+.filter button {
+  margin-right: 2rem;
+  min-width: 5rem;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  color: rgb(65, 98, 168);
+  border: none;
+  border-radius: 1rem;
+  border: 2px solid rgba(65, 98, 168);
+  font-weight: bold;
+  cursor: pointer;
+}
+.filter button.active {
+  background: rgb(65, 98, 168);
+  color: #fff;
+}
