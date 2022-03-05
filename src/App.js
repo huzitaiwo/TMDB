@@ -25,6 +25,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom"
 
 import Home from "./pages/Home";
 import Latest from "./pages/Latest";
+import Rated from "./pages/Rated";
 import Upcoming from "./pages/Upcoming";
 
 
@@ -40,6 +41,9 @@ import Upcoming from "./pages/Upcoming";
           </Route>
           <Route path='/upcoming'>
             <Upcoming />
+          </Route>
+          <Route path='/rated'>
+            <Rated />
           </Route>
         </Switch>
       </BrowserRouter>
