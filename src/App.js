@@ -60,11 +60,10 @@ function App() {
       const movies = await data.json()
 
       setIsLoading(false)
-      setPopular(movies.results)
-      setFiltered([...filtered, ...movies.results])
       setPage(movies.page)
       setTotalPages(movies.total_pages)
-      console.log(movies.total_pages)
+      setPopular([...popular, ...movies.results])
+      setFiltered([...filtered, ...movies.results])
 
     }
     catch(err) {
