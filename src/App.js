@@ -41,6 +41,7 @@ function App() {
   // https://api.themoviedb.org/3/movie/popular?api_key=821df521d9494e5d28d041685eeaee64&page=1
 
   const url = `https://api.themoviedb.org/3/movie/popular?api_key=821df521d9494e5d28d041685eeaee64&page=${page}`
+  console.log(url)
   
   useEffect(() => {
     fetchPopular()
@@ -60,9 +61,10 @@ function App() {
 
       setIsLoading(false)
       setPopular(movies.results)
-      setFiltered(filtered)
+      setFiltered([...filtered, ...movies.results])
       setPage(movies.page)
       setTotalPages(movies.total_pages)
+      console.log(movies.total_pages)
 
     }
     catch(err) {
