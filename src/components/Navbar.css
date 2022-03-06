@@ -1,6 +1,22 @@
 nav {
   background: rgb(65, 98, 168);
   color: rgb(255, 255, 255);
+  margin-bottom: 30px;
+}
+nav .container {
+  height: 10vh;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav li {
+  padding: 0 10px;
+}
+nav a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
 }
