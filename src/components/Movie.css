@@ -13,3 +13,21 @@
   border-radius: 1rem;
   margin-bottom: 1rem;
 }
+.btn-load-more {
+  display: block;
+  width: 500px;
+  margin: 20px auto 0;
+  padding: 1rem 0;
+  background: #fff;
+  color: rgb(65, 98, 168);
+  border: none;
+  border-radius: 1rem;
+  border: 2px solid rgba(65, 98, 168);
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.btn-load-more:hover {
+  background: rgb(65, 98, 168);
+  color: #fff;
+}
