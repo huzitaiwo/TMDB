@@ -47,7 +47,7 @@ export default function Latest() {
   }
 
   return (
-    <div>
+    <div className="container">
       {error && <h2>{error}</h2>}
       {isLoading && <h2>Loading...</h2>}
       {filtered && (
