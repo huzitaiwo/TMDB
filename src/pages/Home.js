@@ -47,7 +47,7 @@ export default function Home() {
   }
 
   return (
-    <div className="home">
+    <div className="home container">
       {error && <h2>{error}</h2>}
       {isLoading && <h2>Loading...</h2>}
       {filtered && (
