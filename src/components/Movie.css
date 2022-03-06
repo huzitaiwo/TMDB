@@ -15,9 +15,9 @@
 }
 .btn-load-more {
   display: block;
-  width: 500px;
-  margin: 20px auto 0;
-  padding: 1rem 0;
+  width: 300px;
+  margin: 20px auto;
+  padding: 0.7rem 0;
   background: #fff;
   color: rgb(65, 98, 168);
   border: none;
