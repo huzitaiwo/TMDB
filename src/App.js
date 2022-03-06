@@ -26,10 +26,11 @@ import { BrowserRouter, Route, Switch } from "react-router-dom"
 // styles
 import './App.css'
 
-import Home from "./pages/Home";
-import Latest from "./pages/Latest";
-import Rated from "./pages/Rated";
-import Upcoming from "./pages/Upcoming";
+import Home from "./pages/Home"
+import Rated from "./pages/Rated"
+import Latest from "./pages/Latest"
+import Upcoming from "./pages/Upcoming"
+import Navbar from "./components/Navbar"
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <Navbar />
         <Switch>
           <Route exact path='/'>
             <Home />
