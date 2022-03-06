@@ -15,7 +15,8 @@ export default function Latest() {
   const [page, setPage] = useState(1)
   const [totalPages, setTotalPages] = useState(1)
 
-  const url = `https://api.themoviedb.org/3/movie/latest?api_key=821df521d9494e5d28d041685eeaee64&page=${page}`
+// https://api.themoviedb.org/3/movie/now_playing?api_key=<<api_key>>&language=en-US&page=1
+  const url = `https://api.themoviedb.org/3/movie/now_playing?api_key=821df521d9494e5d28d041685eeaee64&page=${page}`
 
   useEffect(() => {
     fetchPopular()
