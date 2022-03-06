@@ -13,7 +13,36 @@ export default function Latest() {
 
   const url = `https://api.themoviedb.org/3/movie/latest?api_key=821df521d9494e5d28d041685eeaee64&page=${page}`
 
+  useEffect(() => {
+    fetchPopular()
+  }, [page])
+  
+  const fetchPopular = async () => {
+    setIsLoading(true)
+
+    try {
+      const data = await fetch(url)
+
+      if(!data.ok) {
+        throw new Error(data.statusText)
+      }
+
+      const movies = await data.json()
+
+      setIsLoading(false)
+      setPage(movies.page)
+      setTotalPages(movies.total_pages)
+      setPopular([...popular, ...movies.results])
+      setFiltered([...filtered, ...movies.results])
+
+    }
+    catch(err) {
+      setIsLoading(false)
+      setError(err.message)
+    }
+  }
+
   return (
-    <div>Latest</div>
+    <div>Latest</div> 
   )
 }
