@@ -44,6 +44,17 @@ export default function Rated() {
   }
 
   return (
-    <div>Rated</div>
+    <div className="container">
+      {error && <h2>{error}</h2>}
+      {isLoading && <h2>Loading...</h2>}
+      {filtered && (
+        <Filter setFiltered={setFiltered} genre={genre} setGenre={setGenre} popular={popular} />
+      )}
+      <div className="popular-movies">
+        {filtered.map(movie => {
+          return <Movie key={movie.id} movie={movie} />
+        })}
+      </div>
+    </div>
   )
 }
