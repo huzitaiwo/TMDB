@@ -31,3 +31,11 @@
   background: rgb(65, 98, 168);
   color: #fff;
 }
+
+@media (max-width: 612px) {
+  .btn-load-more {
+    width: 300px;
+    margin: 15px auto;
+    border-radius: 0.7rem;
+  }
+}
