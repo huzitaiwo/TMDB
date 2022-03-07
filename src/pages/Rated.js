@@ -54,9 +54,9 @@ export default function Rated() {
       {filtered && (
         <Filter setFiltered={setFiltered} genre={genre} setGenre={setGenre} popular={popular} />
       )}
-      <div className="popular-movies">
+      <>
         {filtered && <Movie movies={filtered} /> }
-      </div>
+      </>
     </div>
   )
 }
