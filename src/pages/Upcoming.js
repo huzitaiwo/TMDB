@@ -53,11 +53,9 @@ export default function Upcoming() {
       {filtered && (
         <Filter setFiltered={setFiltered} genre={genre} setGenre={setGenre} popular={popular} />
       )}
-      <div className="popular-movies">
-        {filtered.map(movie => {
-          return <Movie key={movie.id} movie={movie} />
-        })}
-      </div>
+      <>
+        {filtered && <Movie movies={filtered} totalPages={totalPages} page={page} setPage={setPage} isLoading={isLoading} /> }
+      </>
     </div> 
   )
 }
