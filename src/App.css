@@ -2,3 +2,20 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 60px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 512px) {
+  .container {
+    padding: 0 15px;
+  }
+}
