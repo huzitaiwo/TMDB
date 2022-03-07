@@ -17,3 +17,14 @@
   background: rgb(65, 98, 168);
   color: #fff;
 }
+
+@media (max-width: 612px) {
+  .filter button {
+    margin-right: 1rem;
+    min-width: 3rem;
+    padding: 0.5rem 0.8rem;
+    border: 1px solid rgba(65, 98, 168);
+    font-weight: normal;
+    border-radius: 0.7rem;
+  }
+}
