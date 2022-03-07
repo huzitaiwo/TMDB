@@ -11,7 +11,7 @@ export default function navbar() {
         <ul>
           <li><Link to='/latest'>Latest</Link></li>
           <li><Link to='/upcoming'>Upcoming</Link></li>
-          <li><Link to='/rated'>Rated</Link></li>
+          <li><Link to='/rated'>Top Rated</Link></li>
       </ul>
       </div>
     </nav>

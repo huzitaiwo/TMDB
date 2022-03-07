@@ -1,6 +1,10 @@
 // https://api.themoviedb.org/3/movie/top_rated?api_key=<<api_key>>&language=en-US&page=1
 import { useState, useEffect } from "react"
 
+// components & pages
+import Movie from "../components/Movie"
+import Filter from "../components/Filter"
+
 export default function Rated() {
   const [popular, setPopular] = useState([])
   const [filtered, setFiltered] = useState([])
