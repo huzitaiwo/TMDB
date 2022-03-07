@@ -55,7 +55,7 @@ export default function Rated() {
         <Filter setFiltered={setFiltered} genre={genre} setGenre={setGenre} popular={popular} />
       )}
       <>
-        {filtered && <Movie movies={filtered} /> }
+        {filtered && <Movie movies={filtered} totalPages={totalPages} page={page} setPage={setPage} isLoading={isLoading} /> }
       </>
     </div>
   )
