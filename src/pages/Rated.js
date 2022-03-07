@@ -12,7 +12,36 @@ export default function Rated() {
   const [page, setPage] = useState(1)
   const [totalPages, setTotalPages] = useState(1)
 
-  const url = `https://api.themoviedb.org/3/movie/popular?api_key=821df521d9494e5d28d041685eeaee64&page=${page}`
+  const url = `https://api.themoviedb.org/3/movie/top_rated?api_key=821df521d9494e5d28d041685eeaee64&page=${page}`
+
+  useEffect(() => {
+    fetchPopular()
+  }, [page])
+  
+  const fetchPopular = async () => {
+    setIsLoading(true)
+
+    try {
+      const data = await fetch(url)
+
+      if(!data.ok) {
+        throw new Error(data.statusText)
+      }
+
+      const movies = await data.json()
+
+      setIsLoading(false)
+      setPage(movies.page)
+      setTotalPages(movies.total_pages)
+      setPopular([...popular, ...movies.results])
+      setFiltered([...filtered, ...movies.results])
+
+    }
+    catch(err) {
+      setIsLoading(false)
+      setError(err.message)
+    }
+  }
 
   return (
     <div>Rated</div>
