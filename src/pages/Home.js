@@ -58,7 +58,6 @@ export default function Home() {
           return <Movie key={movie.id} movie={movie} />
         })}
       </div>
-      {totalPages !== page && <button className="btn-load-more" onClick={() => setPage(page + 1)}>{isLoading ? 'Loading...' : 'load more'}</button>}
     </div>
   )
 }
