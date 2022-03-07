@@ -55,9 +55,7 @@ export default function Rated() {
         <Filter setFiltered={setFiltered} genre={genre} setGenre={setGenre} popular={popular} />
       )}
       <div className="popular-movies">
-        {filtered.map(movie => {
-          return <Movie key={movie.id} movie={movie} />
-        })}
+        {filtered && <Movie movies={filtered} /> }
       </div>
     </div>
   )
