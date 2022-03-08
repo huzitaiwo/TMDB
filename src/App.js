@@ -29,6 +29,7 @@ import Rated from "./pages/Rated"
 import Latest from "./pages/Latest"
 import Upcoming from "./pages/Upcoming"
 import Navbar from "./components/Navbar"
+import MovieDetails from "./pages/MovieDetails"
 
 
 function App() {
@@ -49,6 +50,9 @@ function App() {
           </Route>
           <Route path='/rated'>
             <Rated />
+          </Route>
+          <Route path='/movies/:id'>
+            <MovieDetails />
           </Route>
         </Switch>
       </BrowserRouter>

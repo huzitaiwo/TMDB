@@ -13,6 +13,10 @@
   border-radius: 1rem;
   margin-bottom: 1rem;
 }
+.movies {
+  text-decoration: none;
+  color: #000;
+}
 .btn-load-more {
   display: block;
   width: 300px;
