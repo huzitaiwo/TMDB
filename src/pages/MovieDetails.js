@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom'
 import { useState, useEffect } from "react"
 
 export default function MovieDetails() {
-  const [popular, setPopular] = useState([])
+  const [movie, setMovie] = useState([])
 
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState(null)
@@ -27,10 +27,10 @@ export default function MovieDetails() {
 
       const movie = await data.json()
 
-      setIsLoading(false)
-      setPopular(movie)
-
       console.log(movie)
+      setIsLoading(false)
+      setMovie(movie)
+
 
     }
     catch(err) {
@@ -40,6 +40,13 @@ export default function MovieDetails() {
   }
 
   return (
-    <div>MovieDetails - {id}</div>
+    <div>
+      {error && <h2>{error}</h2>}
+      {isLoading && <h2>Loading...</h2>}
+      {movie && (
+        movie.overview
+      )}
+    </div>
+    
   )
 }

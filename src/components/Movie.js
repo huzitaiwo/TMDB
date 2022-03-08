@@ -8,7 +8,7 @@ export default function Movie({ movies, totalPages, page, setPage, isLoading }) 
     <>
       <div className="popular-movies">
         {movies.map(movie => (
-          <Link to={`/movie/${movie.id}`} key={movie.id} className='movies'>
+          <Link to={`/movies/${movie.id}`} key={movie.id} className='movies'>
             <h2>{movie.title}</h2>
             <img src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`} alt={movie.original_title} />
           </Link>
