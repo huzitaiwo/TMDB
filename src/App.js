@@ -19,8 +19,6 @@
 // translation
 // https://api.themoviedb.org/3/movie/{movie_id}/translations?api_key=<<api_key>>
 
-// `https://api.themoviedb.org/3/movie/${id}?api_key=c50bfdb0e335423db4a57114f454cc4d`
-
 import { BrowserRouter, Route, Switch } from "react-router-dom"
 
 // styles
