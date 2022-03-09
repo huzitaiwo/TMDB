@@ -40,11 +40,13 @@ export default function MovieDetails() {
   }
 
   return (
-    <div>
+    <div className='container'>
       {error && <h2>{error}</h2>}
       {isLoading && <h2>Loading...</h2>}
       {movie && (
-        movie.overview
+        <div>
+          
+        </div>
       )}
     </div>
     
