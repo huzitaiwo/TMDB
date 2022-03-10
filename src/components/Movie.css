@@ -40,6 +40,7 @@
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   /* border: 1px solid rgba(255,255,255,0.5) */
+  margin-bottom: 30px;
 }
 .main-image {
   width: 100%;
@@ -53,10 +54,18 @@
   display: flex;
   flex-direction: column;
 }
-.movie-detials .movie-view {
+.movie-view {
   display: flex;
   justify-content: space-between;
   margin-top: auto;
+}
+.movie-preview {
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+}
+.movie-preview img {
+  height: 300px;
+  object-fit: cover;
 }
 .movie-detials h2 {
   margin-bottom: 30px;
