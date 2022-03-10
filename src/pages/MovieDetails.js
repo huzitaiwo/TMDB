@@ -50,7 +50,7 @@ export default function MovieDetails() {
         <>
           <div className='banner'>
             <div className='movie-detials'>
-              <h2>{movie.original_title}</h2>
+              <h2>{movie.title}</h2>
               <p>{movie.overview}</p>
               <a href={movie.homepage} target="_blank" className='external-link'>visit site</a>
               <div className='movie-view'>
