@@ -48,7 +48,12 @@ export default function MovieDetails() {
       {isLoading && <h2>Loading...</h2>}
       {movie && (
         <div className='banner'>
-          <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="" />
+          <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+          <div className='movie-detials'>
+            <h2>{movie.original_title}</h2>
+            <p>{movie.overview}</p>
+            
+          </div>
         </div>
       )}
     </div>
