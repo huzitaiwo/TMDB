@@ -8,6 +8,7 @@ export default function MovieDetails() {
   const [movie, setMovie] = useState([])
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState(null)
+  const path = 'https://image.tmdb.org/t/p/w500';
 
   const { id } = useParams()
   const url = `https://api.themoviedb.org/3/movie/${id}?api_key=c50bfdb0e335423db4a57114f454cc4d`
@@ -56,12 +57,12 @@ export default function MovieDetails() {
                 <p>{movie.release_date}</p>
               </div>
             </div>
-            <img className='main-image' src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+            <img className='main-image' src={path + movie.poster_path} alt={movie.title} />
           </div>
           {movie.belongs_to_collection && (
             <div className='movie-preview'>
-              <img src={`https://image.tmdb.org/t/p/w500${movie.belongs_to_collection.backdrop_path}`} alt={movie.title} />
-              <img src={`https://image.tmdb.org/t/p/w500${movie.belongs_to_collection.poster_path}`} alt={movie.title} />
+              <img src={path + movie.belongs_to_collection.backdrop_path} alt={movie.title} />
+              <img src={path + movie.belongs_to_collection.poster_path} alt={movie.title} />
             </div>
           )}
         </>
