@@ -32,6 +32,7 @@ export default function Home() {
       }
 
       const movies = await data.json()
+      console.log(movies)
 
       setIsLoading(false)
       setPage(movies.page)
