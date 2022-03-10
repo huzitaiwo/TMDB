@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem 2rem;
+  margin-top: 30px;
 }
 .popular-movies h2 {
   font-size: 0.8rem;
@@ -34,6 +35,15 @@
 .btn-load-more:hover {
   background: rgb(65, 98, 168);
   color: #fff;
+}
+.banner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+}
+.main-image {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
 }
 
 @media (max-width: 612px) {
