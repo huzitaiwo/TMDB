@@ -53,7 +53,7 @@ export default function MovieDetails() {
             <div className='movie-detials'>
               <h2>{movie.original_title}</h2>
               <p>{movie.overview}</p>
-              <a href="#" className='external-link'>visit site</a>
+              <a href={movie.homepage} target_blank className='external-link'>visit site</a>
               <div className='movie-view'>
                 <p>{movie.tagline}</p>
                 <p>{movie.release_date}</p>
