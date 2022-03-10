@@ -1,6 +1,7 @@
 nav {
   background: rgb(65, 98, 168);
   color: rgb(255, 255, 255);
+  margin-bottom: 30px;
 }
 nav .container {
   height: 10vh;

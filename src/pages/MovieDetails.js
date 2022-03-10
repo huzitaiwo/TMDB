@@ -47,19 +47,25 @@ export default function MovieDetails() {
       {error && <h2>{error}</h2>}
       {isLoading && <h2>Loading...</h2>}
       {movie && (
-        <div className='banner'>
-          <img className='main-image' src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
-          <div className='movie-detials'>
-            <h2>{movie.original_title}</h2>
-            <p>{movie.overview}</p>
-            <div className='movie-view'>
-              <p>{movie.tagline}</p>
-              <p>{movie.release_date}</p>
-            </div>
-            {/* <img src={`https://image.tmdb.org/t/p/w500${movie.belongs_to_collection.backdrop_path}`} alt={movie.title} />
-            <img src={`https://image.tmdb.org/t/p/w500${movie.belongs_to_collection.poster_path}`} alt={movie.title} /> */}
+        <>
+          <div className='banner'>
+            <img className='main-image' src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+            <div className='movie-detials'>
+              <h2>{movie.original_title}</h2>
+              <p>{movie.overview}</p>
+              <div className='movie-view'>
+                <p>{movie.tagline}</p>
+                <p>{movie.release_date}</p>
+              </div>
           </div>
-        </div>
+          {movie.belongs_to_collection && (
+            <div className='movie-preview'>
+              <img src={`https://image.tmdb.org/t/p/w500${movie.belongs_to_collection.backdrop_path}`} alt={movie.title} />
+              <img src={`https://image.tmdb.org/t/p/w500${movie.belongs_to_collection.poster_path}`} alt={movie.title} />
+            </div>
+          )}
+          </div>
+        </>
       )}
     </div>
     
