@@ -36,6 +36,12 @@
   color: #fff;
 }
 
+.banner {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+}
+
 @media (max-width: 612px) {
   .btn-load-more {
     width: 300px;

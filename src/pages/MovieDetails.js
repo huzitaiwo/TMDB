@@ -1,6 +1,9 @@
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from "react"
 
+// styles
+import '../components/Movie.css'
+
 export default function MovieDetails() {
   const [movie, setMovie] = useState([])
 
@@ -40,7 +43,7 @@ export default function MovieDetails() {
   }
 
   return (
-    <div className='container'>
+    <div>
       {error && <h2>{error}</h2>}
       {isLoading && <h2>Loading...</h2>}
       {movie && (
