@@ -52,7 +52,11 @@ export default function MovieDetails() {
           <div className='movie-detials'>
             <h2>{movie.original_title}</h2>
             <p>{movie.overview}</p>
-            
+            <p>{movie.tagline}</p>
+            <p>{movie.release_date}</p>
+            {console.log(movie.belongs_to_collection.poster_path)}
+            <img src={`https://image.tmdb.org/t/p/w500${movie.belongs_to_collection.backdrop_path}`} alt={movie.title} />
+            <img src={`https://image.tmdb.org/t/p/w500${movie.belongs_to_collection.poster_path}`} alt={movie.title} />
           </div>
         </div>
       )}
