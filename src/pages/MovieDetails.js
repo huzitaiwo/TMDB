@@ -57,6 +57,7 @@ export default function MovieDetails() {
                 <p>{movie.tagline}</p>
                 <p>{movie.release_date}</p>
               </div>
+            </div>
           </div>
           {movie.belongs_to_collection && (
             <div className='movie-preview'>
@@ -64,7 +65,6 @@ export default function MovieDetails() {
               <img src={`https://image.tmdb.org/t/p/w500${movie.belongs_to_collection.poster_path}`} alt={movie.title} />
             </div>
           )}
-          </div>
         </>
       )}
     </div>
