@@ -6,12 +6,10 @@ import '../components/Movie.css'
 
 export default function MovieDetails() {
   const [movie, setMovie] = useState([])
-
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState(null)
 
   const { id } = useParams()
-
   const url = `https://api.themoviedb.org/3/movie/${id}?api_key=c50bfdb0e335423db4a57114f454cc4d`
 
   useEffect(() => {
