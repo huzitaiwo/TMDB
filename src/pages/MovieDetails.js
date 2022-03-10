@@ -49,7 +49,6 @@ export default function MovieDetails() {
       {movie && (
         <>
           <div className='banner'>
-            <img className='main-image' src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
             <div className='movie-detials'>
               <h2>{movie.original_title}</h2>
               <p>{movie.overview}</p>
@@ -59,6 +58,7 @@ export default function MovieDetails() {
                 <p>{movie.release_date}</p>
               </div>
             </div>
+            <img className='main-image' src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
           </div>
           {movie.belongs_to_collection && (
             <div className='movie-preview'>
