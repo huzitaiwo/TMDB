@@ -73,6 +73,9 @@
 .movie-detials p {
   margin: 10px 0;
 }
+.external-link {
+
+}
 
 @media (max-width: 612px) {
   .btn-load-more {
