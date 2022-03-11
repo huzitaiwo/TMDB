@@ -105,4 +105,8 @@
   .movie-preview {
     grid-template-columns: 1fr;
   }
+  .movie-preview img {
+    height: 250px;
+    object-fit: cover;
+  }
 }
