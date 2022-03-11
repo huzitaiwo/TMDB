@@ -46,7 +46,7 @@ export default function MovieDetails() {
       {error && <h2>{error}</h2>}
       {isLoading && <h2>Loading...</h2>}
       {movie && (
-        <>
+        <div className='container'>
           <div className='banner'>
             <div className='movie-detials'>
               <h2>{movie.title}</h2>
@@ -65,7 +65,7 @@ export default function MovieDetails() {
               <img src={path + movie.belongs_to_collection.poster_path} alt={movie.title} />
             </div>
           )}
-        </>
+        </div>
       )}
     </div>
     
