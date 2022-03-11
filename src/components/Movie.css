@@ -102,4 +102,7 @@
     flex-direction: column;
     margin-top: none;
   }
+  .movie-preview {
+    grid-template-columns: 1fr;
+  }
 }
