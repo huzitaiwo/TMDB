@@ -54,7 +54,7 @@ export default function Home() {
         <Filter setFiltered={setFiltered} genre={genre} setGenre={setGenre} popular={popular} />
       )}
       <>
-        {filtered && <Movie movies={filtered} title={"Popular"} totalPages={totalPages} page={page} setPage={setPage} isLoading={isLoading} /> }
+        {filtered && <Movie movies={filtered} title="Popular" totalPages={totalPages} page={page} setPage={setPage} isLoading={isLoading} /> }
       </>
     </div>
   )

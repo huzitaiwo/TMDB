@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom'
 // styles
 import './Movie.css'
 
-export default function Movie({ movies, totalPages, page, setPage, isLoading }) {
+export default function Movie({ movies, totalPages, page, setPage, isLoading, title }) {
   return (
     <>
+      <p>{title} movies</p>
       <div className="popular-movies">
         {movies.map(movie => (
           <Link to={`/movies/${movie.id}`} key={movie.id} className='movies'>
