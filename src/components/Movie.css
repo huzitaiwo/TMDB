@@ -39,7 +39,6 @@
 .banner {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-  /* border: 1px solid rgba(255,255,255,0.5) */
 }
 .title {
   font-weight: 300;
@@ -87,10 +86,20 @@
   margin-top: 20px;
 }
 
+@media (max-width: 900px) {
+  .banner {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 612px) {
   .btn-load-more {
     width: 300px;
     margin: 15px auto;
     border-radius: 0.7rem;
+  }
+  .movie-view {
+    flex-direction: column;
+    margin-top: none;
   }
 }
