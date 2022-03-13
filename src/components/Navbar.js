@@ -9,7 +9,6 @@ export default function navbar() {
       <div className="container">
         <Link to='/'><h1 className='logo'>TMDB</h1></Link>
         <ul>
-          <li><Link to='/latest'>Latest</Link></li>
           <li><Link to='/upcoming'>Upcoming</Link></li>
           <li><Link to='/rated'>Top Rated</Link></li>
       </ul>
