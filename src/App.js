@@ -6,12 +6,14 @@ import { BrowserRouter, Route, Switch } from "react-router-dom"
 // styles
 import './App.css'
 
+// pages and components
 import Home from "./pages/Home"
 import Rated from "./pages/Rated"
 import Latest from "./pages/Latest"
 import Upcoming from "./pages/Upcoming"
 import Navbar from "./components/Navbar"
 import MovieDetails from "./pages/MovieDetails"
+import Poster from "./components/Poster"
 
 
 function App() {
@@ -19,6 +21,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Navbar />
+        <Poster />
         <Switch>
           <Route exact path='/'>
             <Home />
