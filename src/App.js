@@ -1,16 +1,5 @@
-// https://api.themoviedb.org/3/movie/550?api_key=821df521d9494e5d28d041685eeaee64
-
-// latest
-//https://api.themoviedb.org/3/movie/latest?api_key=<<api_key>>&language=en-US
-
-// now-playing
-// https://api.themoviedb.org/3/movie/now_playing?api_key=<<api_key>>&language=en-US&page=1
-
 // get videos
 // https://api.themoviedb.org/3/movie/{movie_id}/videos?api_key=<<api_key>>&language=en-US
-
-// translation
-// https://api.themoviedb.org/3/movie/{movie_id}/translations?api_key=<<api_key>>
 
 import { BrowserRouter, Route, Switch } from "react-router-dom"
 
