@@ -15,7 +15,6 @@ import MovieDetails from "./pages/MovieDetails"
 
 
 function App() {
-
   return (
     <div className="App">
       <BrowserRouter>
