@@ -15,7 +15,7 @@ export default function Filter({ setFiltered, genre, setGenre, popular }) {
     const filtered = popular.filter(movie => movie.genre_ids.includes(genre))
     setFiltered(filtered)
       
-  }, [genre])
+  }, [genre, popular, setFiltered])
   
 
   return (
