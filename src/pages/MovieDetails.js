@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom'
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 
 // styles
 import '../components/Movie.css'
@@ -29,7 +29,7 @@ export default function MovieDetails() {
       setMovie(movie)
 
     }
-    
+
     catch(err) {
       setIsLoading(false)
       setError(err.message)
@@ -50,7 +50,7 @@ export default function MovieDetails() {
             <div className='movie-detials'>
               <h2>{movie.title}</h2>
               <p>{movie.overview}</p>
-              <a href={movie.homepage} target="_blank" className='external-link'>visit site</a>
+              <a href={movie.homepage} target="_blank" rel="noreferrer" className='external-link'>visit site</a>
               <div className='movie-view'>
                 <p>{movie.tagline}</p>
                 <p>{movie.release_date}</p>
