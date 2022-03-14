@@ -41,11 +41,11 @@ export default function Rated() {
       setIsLoading(false)
       setError(err.message)
     }
-  }, [page])
+  }, [page, url, filtered, popular])
 
   useEffect(() => {
     fetchRated()
-  }, [url, fetchRated])
+  }, [fetchRated])
 
   return (
     <div className="container">
