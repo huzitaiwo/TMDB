@@ -1,5 +1,5 @@
 // https://api.themoviedb.org/3/movie/top_rated?api_key=<<api_key>>&language=en-US&page=1
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 
 // components & pages
 import Movie from "../components/Movie"
@@ -17,10 +17,6 @@ export default function Rated() {
   const [totalPages, setTotalPages] = useState(1)
 
   const url = `https://api.themoviedb.org/3/movie/top_rated?api_key=821df521d9494e5d28d041685eeaee64&page=${page}`
-
-  useEffect(() => {
-    fetchRated()
-  }, [fetchRated])
   
   const fetchRated = useCallback(async () => {
     setIsLoading(true)
@@ -46,6 +42,10 @@ export default function Rated() {
       setError(err.message)
     }
   }, [page])
+
+  useEffect(() => {
+    fetchRated()
+  }, [fetchRated, url])
 
   return (
     <div className="container">
