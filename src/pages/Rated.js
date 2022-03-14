@@ -45,7 +45,7 @@ export default function Rated() {
 
   useEffect(() => {
     fetchRated()
-  }, [fetchRated, url])
+  }, [url, fetchRated])
 
   return (
     <div className="container">
