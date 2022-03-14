@@ -12,12 +12,8 @@ export default function MovieDetails() {
 
   const { id } = useParams()
   const url = `https://api.themoviedb.org/3/movie/${id}?api_key=c50bfdb0e335423db4a57114f454cc4d`
-
-  useEffect(() => {
-    fetchPopular()
-  }, [])
   
-  const fetchPopular = async () => {
+  const fetchDetails = useCallback(async () => {
     setIsLoading(true)
 
     try {
@@ -29,17 +25,20 @@ export default function MovieDetails() {
 
       const movie = await data.json()
 
-      console.log(movie)
       setIsLoading(false)
       setMovie(movie)
 
-
     }
+    
     catch(err) {
       setIsLoading(false)
       setError(err.message)
     }
-  }
+  }, [url])
+
+  useEffect(() => {
+    fetchDetails()
+  }, [fetchDetails])
 
   return (
     <div>
