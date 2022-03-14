@@ -19,10 +19,10 @@ export default function Rated() {
   const url = `https://api.themoviedb.org/3/movie/top_rated?api_key=821df521d9494e5d28d041685eeaee64&page=${page}`
 
   useEffect(() => {
-    fetchPopular()
-  }, [page])
+    fetchRated()
+  }, [fetchRated])
   
-  const fetchPopular = async () => {
+  const fetchRated = useCallback(async () => {
     setIsLoading(true)
 
     try {
@@ -45,7 +45,7 @@ export default function Rated() {
       setIsLoading(false)
       setError(err.message)
     }
-  }
+  }, [page])
 
   return (
     <div className="container">
