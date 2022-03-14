@@ -41,7 +41,7 @@ export default function Rated() {
       setIsLoading(false)
       setError(err.message)
     }
-  }, [page, url])
+  }, [url])
 
   useEffect(() => {
     fetchRated()
