@@ -8,10 +8,10 @@ export default function MovieDetails() {
   const [movie, setMovie] = useState([])
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState(null)
-  const path = 'https://image.tmdb.org/t/p/w500';
 
   const { id } = useParams()
   const url = `https://api.themoviedb.org/3/movie/${id}?api_key=c50bfdb0e335423db4a57114f454cc4d`
+  const path = 'https://image.tmdb.org/t/p/w500';
   
   const fetchDetails = useCallback(async () => {
     setIsLoading(true)
