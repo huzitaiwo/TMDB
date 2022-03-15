@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback} from "react"
+import { useState, useEffect, useCallback } from "react"
 
 // components & pages
 import Movie from "../components/Movie"
