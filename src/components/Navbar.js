@@ -7,7 +7,7 @@ export default function navbar() {
   return (
     <nav>
       <div className="container">
-        <Link to='/'><h1 className='logo'>TMDB</h1></Link>
+        <Link to='/'><h1 className='logo'>myMovies</h1></Link>
         <ul>
           <li><Link to='/upcoming'>Upcoming</Link></li>
           <li><Link to='/rated'>Top Rated</Link></li>
